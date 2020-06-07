@@ -1,0 +1,17 @@
+$colourPrimary: #004040;
+
+$bodyBgColour: #eee;
+$bodyTextColour: #000;
+
+$menuBgColour: #fff;
+$menuBorderColour: darken($colourPrimary, 3%);
+$menuToggleBgColour: $colourPrimary;
+$menuHoverBgColour: rgba($colourPrimary, 0.15);
+$menuHeight: 70px;
+$menuBorderHeight: 2px;
+$menuTextColour: $colourPrimary;
+
+$headerImageBorderRadius: 0 0 30px 0;
+
+$footerBg: darken($colourPrimary, 3%);
+$footerText: #ccc;

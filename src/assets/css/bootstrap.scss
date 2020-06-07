@@ -1,0 +1,30 @@
+@import "vars";
+
+$body-bg: $bodyBgColour;
+$body-color: $bodyTextColour;
+
+$font-size-base: 0.875rem;
+$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$h1-font-size: 33px;
+$h2-font-size: 20px;
+$h3-font-size: 16px;
+$h4-font-size: 14px;
+
+$link-color: #004040;
+
+$paragraph-margin-bottom: 1.5em;
+
+$navbar-light-color: $menuTextColour;
+$navbar-light-hover-color: $navbar-light-color;
+$navbar-light-active-color: #E5ECEC;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 900px,
+  xl: 900px
+);
+
+@import "~bootstrap";
+@import "~bootstrap-vue";
