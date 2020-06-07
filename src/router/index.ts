@@ -41,7 +41,6 @@ const routes: RouteConfig[] = [
       header: 'Clients'
     }
   },
-  ...projectRoutes,
   {
     path: '/contact',
     name: 'contact',
@@ -50,6 +49,11 @@ const routes: RouteConfig[] = [
       headerImage: 'lorry.jpg',
       header: 'Contact Us'
     }
+  },
+  ...projectRoutes,
+  {
+    path: '*',
+    component: () => import('@/views/Error/NotFound.vue')
   }
 ]
 

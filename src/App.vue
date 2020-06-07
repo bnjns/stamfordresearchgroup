@@ -2,7 +2,7 @@
   <div id="app">
     <app-menu/>
     <main>
-      <b-container id="header">
+      <b-container id="header" v-if="headerImage">
         <img :src="`/images/headers/${headerImage}`" alt="">
         <h1 v-if="!!headerText">{{ headerText }}</h1>
       </b-container>
