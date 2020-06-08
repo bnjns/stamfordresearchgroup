@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
 import Home from '@/views/Home.vue'
 import projectRoutes from './projects'
+import aliases from './aliases'
 
 Vue.use(VueRouter)
 
@@ -54,7 +55,8 @@ const routes: RouteConfig[] = [
   {
     path: '*',
     component: () => import('@/views/Error/NotFound.vue')
-  }
+  },
+  ...aliases
 ]
 
 const router = new VueRouter({
