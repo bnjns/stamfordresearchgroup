@@ -2,7 +2,7 @@ import { RouteConfig } from 'vue-router'
 
 const routes: RouteConfig[] = [
   {
-    path: '/project/ports',
+    path: '/projects/ports',
     name: 'project-ports',
     component: () => import('@/views/Projects/Ports.vue'),
     meta: {
@@ -11,7 +11,7 @@ const routes: RouteConfig[] = [
     }
   },
   {
-    path: '/project/shipping',
+    path: '/projects/shipping',
     name: 'project-shipping',
     component: () => import('@/views/Projects/Shipping.vue'),
     meta: {
@@ -20,7 +20,7 @@ const routes: RouteConfig[] = [
     }
   },
   {
-    path: '/project/rail-intermodal',
+    path: '/projects/rail-and-intermodal',
     name: 'project-rail-intermodal',
     component: () => import('@/views/Projects/RailAndIntermodal.vue'),
     meta: {
@@ -29,7 +29,7 @@ const routes: RouteConfig[] = [
     }
   },
   {
-    path: '/project/logistics',
+    path: '/projects/logistics',
     name: 'project-logistics',
     component: () => import('@/views/Projects/Logistics.vue'),
     meta: {
@@ -38,7 +38,7 @@ const routes: RouteConfig[] = [
     }
   },
   {
-    path: '/project/equipment',
+    path: '/projects/equipment',
     name: 'project-equipment',
     component: () => import('@/views/Projects/Equipment.vue'),
     meta: {
