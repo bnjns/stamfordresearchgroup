@@ -1,26 +1,23 @@
 <template>
-  <b-nav-item exact-active-class="active" :to="{ name: item.route || '#' }" v-if="!hasChildren">
+  <b-nav-item-dropdown :text="item.text" v-if="hasChildren">
+    <b-nav-item
+      v-for="(child, index) in item.children"
+      :key="index"
+      :to="{ name: child.route || '#' }"
+      exact-active-class="active">
+      {{ child.text }}
+    </b-nav-item>
+  </b-nav-item-dropdown>
+  <b-nav-item exact-active-class="active" :to="{ name: item.route || '#' }" v-else>
     {{ item.text }}
   </b-nav-item>
-  <b-nav-item-dropdown :text="item.text" v-else>
-    <menu-item
-      :key="index"
-      :item="child"
-      v-for="(child, index) in item.children"
-    />
-  </b-nav-item-dropdown>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
 import { MenuItem as MenuItemProps } from '@/types/menu'
 
-@Component({
-  components: {
-    // eslint-disable-next-line @typescript-eslint/no-use-before-define
-    MenuItem
-  }
-})
+@Component
 export default class MenuItem extends Vue {
   @Prop() readonly item!: MenuItemProps
   get hasChildren(): boolean {
